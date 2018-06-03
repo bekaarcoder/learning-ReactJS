@@ -7,6 +7,7 @@ import {addExpense} from './actions/expenses';
 import {setTextFilter} from './actions/filters';
 import getVisibleExpenses from './selectors/expenses';
 import './styles/style.css';
+import './firebase/firebase';
 
 const store = configureStore();
 
