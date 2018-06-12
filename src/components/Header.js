@@ -19,9 +19,6 @@ const Header = ({startLogout}) => {
               <NavLink className="nav-link" to="/create" activeClassName="active">Create</NavLink>
           </li>
           <li class="nav-item">
-              <NavLink className="nav-link" to="/help" activeClassName="active">About</NavLink>
-          </li>
-          <li class="nav-item">
               <a className="nav-link" onClick={startLogout}>Logout</a>
           </li>
         </ul>

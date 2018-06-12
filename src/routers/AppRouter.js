@@ -5,10 +5,10 @@ import LoginPage from '../components/LoginPage';
 import ExpenseDashboard from '../components/ExpenseDashboard';
 import AddExpense from '../components/AddExpense';
 import EditExpense from '../components/EditExpense';
-import HelpPage from '../components/HelpPage';
 import NotFound from '../components/NotFound';
 // import Header from '../components/Header';
 import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 
 export const history = createHistory();
 
@@ -18,7 +18,7 @@ const AppRouter = () => (
       {/*<Header />*/}
       {/*<div className="container-fluid">*/}
         <Switch>
-          <Route
+          <PublicRoute
             path="/"
             component={LoginPage}
             exact={true}
@@ -36,11 +36,6 @@ const AppRouter = () => (
           <PrivateRoute
             path="/edit/:id"
             component={EditExpense}
-          />
-          {/* Help route */}
-          <Route
-            path="/help"
-            component={HelpPage}
           />
           {/* 404 */}
           <Route
